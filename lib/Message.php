@@ -8,27 +8,30 @@ class Message
     private string $name;
     private string $email;
     private string $message;
-    private string $edit;
+    private string $answer;
 
     /**
      * Message constructor.
      * @param string $name
      * @param string $email
      * @param string $message
-     * @param string $edit
+     * @param string $answer
      */
-    public function __construct(string $name, string $email, string $message, string $edit)
+    public function __construct(string $name, string $email, string $message, string $answer ='')
     {
+
         $this->name = $name;
         $this->email = $email;
         $this->message = $message;
-        $this->edit = $edit;
+        $this->answer = $answer;
+
     }
 
 
-    public function add()
+    public function addMessage()
     {
-        return 0;
+        $db = new DB(\PDO::FETCH_ASSOC);
+        $db->execute("INSERT INTO messages SET `name`= $this->name, `email`= $this->email, `message`= $this->message, `answer`= $this->answer");
     }
 
     public function del()
