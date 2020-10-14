@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '\autoload.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/autoload.php';
 
 
 \myLib\Config::setArray([
@@ -7,7 +7,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '\autoload.php';
     'db_name' => 'gb',
     'db_charset'=>'utf8',
     'db_user' => 'root',
-    'db_pass' => ''
+    'db_pass' => 'root'
 ]);
 
 

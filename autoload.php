@@ -9,6 +9,6 @@
         if(is_file($fileName)){
             include $fileName;
         }else{
-            throw new Exception("Can't load . '$className' .  from file . '$fileName'");
+            throw new Exception("Can't load . '{$className}' .  from file . '{$fileName}'");
         }
     });

@@ -3,7 +3,7 @@
 
 class Config
 {
-    private static array $attributes = [];
+    private static $attributes = [];
 
     public static function get($var, $default = null)
     {
